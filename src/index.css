@@ -1,0 +1,245 @@
+@import "tailwindcss";
+
+
+@theme {
+
+   --color-primary : #8e1a21;
+   --color-primary-alpha : #E0403755;
+   --color-secondery: #f9e64f; 
+   --color-secondery-alpha: #f9e64f44; 
+
+   --color-primary-img : #8e1a2155;
+
+   --color-back-ground : #1f1f21 ;
+   --color-back-ground-1: #3a3a3c; 
+
+   --color-text-primary :#Fdfdfd;
+   --color-text-secondry : #c1c1c1;
+   --color-black-1 : #000000 ;
+   --color-back-story : radial-gradient(circle , var(--color-black-1) , var(--color-primary));
+   --color-out-bor-1 : linear-gradient(45deg , var(--color-secondery ) , var(--color-lenier-2), var(--color-primary) );
+   --color-lenier-2 : #E04037 ;
+   /* ++++++++++++++++++ */
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #eeeeee;
+  --gray-300: #e0e0e0;
+  --gray-400: #bdbdbd;
+  --gray-500: #9e9e9e;
+  --gray-600: #757575;
+  --gray-700: #616161;
+  --gray-800: #424242;
+  --gray-900: #212121;
+   
+}
+  .persent{
+    background: linear-gradient(45deg , var(--color-secondery ) , var(--color-lenier-2), var(--color-primary) );
+  }
+
+    .pro-img:hover {
+    filter:grayscale(0);
+    transform: rotate(2deg) scale(1.07);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-family: "Google Sans Flex", sans-serif;
+  }
+
+   body {
+      background-color: var(--color-back-ground)
+   }
+
+ .center-cont {
+    @apply container mx-auto w-[90%] max-w-[1200px];
+ }
+
+.shadow-1 {
+    box-shadow: 5px 5px 5px 4px var(--color-primary);
+}
+
+.shadow-2 {
+    box-shadow: 5px 4px 6px 4px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-3 {
+    box-shadow:0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* *{
+  border: 2px blue solid;
+} */
+
+/* normaliz */
+
+/* header */
+
+.head-link {
+  padding: 5px 10px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  border: solid 1px var(--color-gray-50);
+}
+
+.head-link::before {
+      content: "";
+      background-color: var(--color-primary);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: -100%;
+      left: 0;
+      transition: 0.4s;
+      z-index: -1;;
+
+    }
+
+.head-link:hover::before{
+ top: 0;
+
+}
+
+.head-link:hover{
+  color:var(--color-back-ground);
+  border-color: var(--color-primary);
+}
+/* header */
+
+/* Story section */
+  .My-Story{
+    background: radial-gradient(circle , var(--color-primary) , var(--color-black-1)  );
+  }
+
+    .img-grey {
+    filter: grayscale(1);
+  }
+
+
+
+/* Story section */
+
+/* Skills section */
+
+
+  .prog-line-cont{
+    transition: 0.4s;
+    box-shadow: 5px 4px 6px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .prog-line-cont:hover{
+    transform: scale(1.05);
+  }
+  
+  @keyframes red-glow {
+  0% {
+    box-shadow: 0 0 10px 3px rgba(255, 0, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px 10px rgba(255, 0, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 10px 3px rgba(255, 0, 0, 0.4);
+  }
+}
+
+.prog-line-cont:hover{
+  animation: red-glow 2s infinite;
+}
+
+/* Skills section */
+/* card code */
+
+    img{
+    width: 100%;
+    height: 100%;
+    }
+
+  .card:hover  , .card-prog:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(46, 46, 46, 0.5);
+    animation: red-glow 2s infinite;
+
+    }
+   
+    .card-btn  {
+      border: 1px solid var(--color-gray-50);
+      width: fit-content;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 5px;
+      color: var(--color-gray-50);
+      display: block;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 5px 4px 6px 4px rgba(0, 0, 0, 0.1); 
+      /* z-index: 10; */
+    }
+
+    .card-btn::before {
+      content: "";
+      background-color: var(--color-secondery);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: -100%;
+      left: 0;
+      transition: 0.4s;
+      z-index: -1;
+
+    }
+
+    .card-btn:hover::before {
+      top:0;
+      cursor: pointer;
+    }
+
+    .card-btn:hover {
+      color: var(--color-back-ground);
+      border:var(--color-secondery) solid 1px;
+      outline: none;
+    }
+
+    .card:hover .under-line{
+      margin-left: 20px;
+    }
+
+    .lang-t{
+      transition: 0.4s;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .lang-t:hover{
+       box-shadow: 0px 0px 6px 4px rgba(0, 0, 0,0.2);
+       transform: scale(1.05);
+    }
+
+    .header-sec{
+      text-shadow:5px 4px 6px 4px rgba(0, 0, 0, 0.1);
+    }
+
+/* card code */
+/* review */
+.rev-card:hover{
+  transform: scale(1.06);
+  animation: red-glow 2s infinite;
+}
+/* review */
+/* Say Hi  */
+.contact:hover{
+  transform: scale(1.05) translateY(-5px);
+  background-color: var(--color-primary-alpha);
+}
+
+/* Say Hi  */
+/* footer */
+.icons:hover {
+  background-color: var(--color-primary);
+  transform: translateY(-5px);
+  color: var(--color-secondery);
+  font-size: 25px;
+}
+/* footer */
