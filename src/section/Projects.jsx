@@ -36,9 +36,10 @@ const Projects = () => {
     ]
 
 
-    return <section className="Projects  w-full h-[80%] " id="Projects">
-        <Head main={"MY "} main2={"Projects"} desc={"A selection of my recent work showcasing my design and development skills."}/>
-        <div className="center-cont">
+    return <section className="Projects w-full h-[80%] p-[30px] bg-body relative" id="Projects">
+        <Head main={"MY "} main2={"Projects"}/>
+        <div className="center-cont my-[100px]">
+
              <div className="grid grid-cols-1  min-[670px]:gap-[10] min-[670px]:grid-cols-2 min-[1000px]:grid-cols-3 gap-[30px]">
                 {
                     PROJECTS.map( (e , i) => <Projs pic={e.photo} icon={e.icons} name={e.name} lang={e.langUse} linkpro={e.proLink} key={i} />)

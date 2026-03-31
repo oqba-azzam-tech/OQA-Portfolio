@@ -25,7 +25,7 @@ const LINKS = [
         link : "#Hi"
     },
 ] 
-    return<section className="Header sticky w-full top-[0px] z-[100] bg-body-2 text-text-primary" > 
+    return<section className="Header sticky w-full top-[0px] z-[100] bg-body text-text-primary" > 
   
     <div className="center-cont flex justify-between items-center flex-wrap text-[20px]">
 

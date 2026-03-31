@@ -32,14 +32,8 @@ const Footer = () => {
     return <>
     <section className="footer my-[50px]">
         <div className="center-cont flex flex-col justify-center items-center gap-[30px]">
-            
-                <div className="flex flex-row justify-center text-[30px] gap-[15px]">
-                        {socialLink.map((e , i) => <div className="text-secondary w-[40px] h-[40px] rounded-[50%] flex justify-center items-center duration-300" key={i}>
-                        <a href={e.link}>{e.icon}</a>
-                    </div>)}
-                </div>
-                <div>
-                <p className=" text-secondary">Copyright ©{Year} | OAZ </p>
+                <div className="bg-secondary py-[20px] px-[15px] rounded-[20px]">
+                <p className="">Copyright ©{Year} | OqbaAZ. </p>
                 </div>
            
         </div>

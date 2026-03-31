@@ -18,8 +18,9 @@ const Projs = ({name , linkpro , lang , icon , pic}) => {
             </div>
 
             <div className="flex gap-[5px] my-[15px] ">
-                {lang.map((l) => <span title={l} className="lang-t duration-300 text-text-secondary text-xs px-3 py-1 bg-accent/20 rounded-full">{l}</span>)}
+                {lang.map((l,i) => <span key={i} title={l} className="lang-t duration-300 text-text-secondary text-xs px-3 py-1 bg-accent/20 rounded-full">{l}</span>)}
             </div>
+            
 
              <Btn msg={"See Pro"} link={linkpro} className="hover:translate-1"/>
         </div>

@@ -2,11 +2,11 @@ import Head from "../components/head.sec.jsx";
 import Progres from "../components/Progres.jsx";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact } from 'react-icons/fa';
 import { SiCplusplus , SiTailwindcss } from 'react-icons/si';
-import SkillCard from "../components/skillCard.jsx";
 
+const Skills = () => { 
 
-const Skills = () => {
-     
+   
+
     const mySkills = [
         {
             name: "HTML",
@@ -40,12 +40,21 @@ const Skills = () => {
         }, 
     ]
 
-    return <section className="My-Skills p-[30px] mb-[30px] w-full h-[90%] " id="Skills">
+    return <section className="My-Skills p-[30px] w-full h-[90%] bg-body " id="Skills">
                 <Head main2={"Skills"} desc={""}/>
-        <div className="center-cont flex flex-wrap items-center justify-between">
+        <div className="center-cont flex flex-wrap gap-[10px]  items-center justify-between">
  
-            {mySkills.map((e , i)=> <SkillCard name={e.name} icon={e.icon}></SkillCard>)}
-
+            {mySkills.map((e , i)=> <div key={i} className="skill-card bg-secondary rounded-[10px] p-[20px] min-w-[150px] ">
+                <div className="flex flex-col justify-center items-center gap-[10px]">
+                    <div className="text-[50px] hover:text-accent duration-300 ">
+                    {e.icon}
+                    </div>
+                    <h3>{e.name}</h3>
+                </div>
+                
+            </div>)}
+           
+            
         </div>
     </section>
 }

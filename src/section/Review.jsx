@@ -1,6 +1,7 @@
 import {  FaUser } from 'react-icons/fa';
 import Head from '../components/head.sec.jsx';
 import Swiperr from '../components/Swiper.jsx';
+import 'lord-icon-element';
 
 const Review = () => {
     const Rev = [
@@ -23,12 +24,13 @@ const Review = () => {
         },
     ]
     
-    return <section className="Review m-[30px] h-[90%]" id="Review">
+    return <section className="Review h-[90%] p-[30px]" id="Review">
 
-      <Head main2={"Review"} desc={""}/>
+      <div className='rev-head bg-secondary border-l-4 border-b-[1px] border-accent py-[10px] rounded-[20px] my-[40px]'>
+        <Head main2={"Review"} />
+      </div>
+      
         <div className="center-cont">
-
-           
 
             <div>
                 <Swiperr Review={Rev}/>
